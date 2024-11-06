@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Itim&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- titulo -->
+    <title>Funções 2</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1> Funções - Javascript </h1>
+        <!-- onclick serve ao clicar -->
+        <button class="button" onclick="toggleText()"> Mostrar / Ocultar o texto</button>
+        <p id="toggleText"> Este exemplo de texto será exibido e ocultado.</p>
+
+        <h2>Calculadora Simples</h2>
+        <!-- esses inputs servem apenas para indicar ao sujeito aonde colocar os numeros -->
+        <input type="number" name="" id="num1" placeholder="Número 1">
+        <input type="number" name="" id="num2" placeholder="Número 2">
+        <!-- sumcalculate serve para calcular -->
+        <button class="button" onclick="sumCalculate()">Calcular</button>
+        <p id="sumResult">Soma: </p>
+
+
+    </div>
+    <!-- Javascript -->
+    <script>
+        // Alternar visibilidade
+        function toggleText() {
+            // chama pra constante o id
+            const text = document.getElementById("toggleText");
+            // aqui é oque acontece
+            text.style.display = text.style.display === "none" ? "block" : "none";
+        }
+
+        // Função Soma/Sum
+
+        function sumCalculate() {
+            // o calcular
+            const num1 = parseFloat(document.getElementById("num1").value);
+            // num seria numero abreviado
+            const num2 = parseFloat(document.getElementById("num2").value);
+            // resultado
+            const resultado = num1 + num2
+
+            document.getElementById("sumResult").innerText = "Soma: " + (isNaN(resultado) ? "Digite números válidos" : resultado);
+            // sla que p**** é essa
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
